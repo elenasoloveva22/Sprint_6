@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-from data import MAIN_PAGE
+from urls import MAIN_PAGE
 
 
 @pytest.fixture(scope='function')

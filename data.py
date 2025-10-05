@@ -1,10 +1,6 @@
 from pages.header_page import HeaderPage
 from pages.main_page import MainPage
 
-MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
-ORDER_PAGE = MAIN_PAGE + 'order'
-REDIRECT = 'https://dzen.ru/?yredirect=true'
-
 # Вопросы и ответы в разделе «Вопросы о важном» главной страницы
 QUESTION_1 = 'Сколько это стоит? И как оплатить?'
 ANSWER_1 = 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'

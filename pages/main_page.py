@@ -14,7 +14,6 @@ class MainPage(BasePage):
     )
 
     def format_locator(self, num, locator):
-        '''Получение форматированного локатора элемента.'''
         method, pattern = locator
         return method, pattern.format(num)
 
@@ -41,3 +40,8 @@ class MainPage(BasePage):
         return self.get_element(
             self.format_locator(num, self.ANSWER)
         ).is_displayed()
+
+    @allure.step('Ожидание появления ответа на вопрос {num}')
+    def wait_for_answer_to_appear(self, num, timeout=5):
+        answer_locator = self.format_locator(num, self.ANSWER)
+        return self.wait_for_element_visible(answer_locator, timeout=timeout)
